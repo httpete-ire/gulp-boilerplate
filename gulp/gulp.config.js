@@ -1,7 +1,8 @@
 exports.config =  {
   tests: {
-    public:'path/to/public/tests/',
-    server:'/path/to/server/tests'
+    public:'./public/test/**/*.js',
+    server:'./server/test/**/*.js',
+    karma:'./karma.conf.js'
   },
   styles: {
     sass: './sass/**/*.scss',
