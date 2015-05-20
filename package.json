@@ -1,0 +1,20 @@
+{
+  "name": "gulp-setup",
+  "version": "0.0.1",
+  "description": "A gulp setup that seperates the tasks into seperate files",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-header": "^1.2.2",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "require-dir": "^0.3.0"
+  }
+}
