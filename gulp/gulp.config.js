@@ -8,9 +8,10 @@ exports.config =  {
     css: './css'
   },
   js: {
-    server: 'server/**/*.js',
+    server: 'server/js/**/*.js',
     client: 'public/**/*.js'
-  }
+  },
+  build: 'public/build'
 };
 
 exports.banner = [
