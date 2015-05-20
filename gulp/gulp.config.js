@@ -6,6 +6,10 @@ exports.config =  {
   styles: {
     sass: './sass/**/*.scss',
     css: './css'
+  },
+  js: {
+    server: 'server/**/*.js',
+    client: 'public/**/*.js'
   }
 };
 
