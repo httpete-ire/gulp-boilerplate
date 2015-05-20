@@ -11,7 +11,8 @@ exports.config =  {
     server: 'server/js/**/*.js',
     client: 'public/**/*.js'
   },
-  build: 'public/build'
+  build: 'public/build',
+  port: 3000
 };
 
 exports.banner = [

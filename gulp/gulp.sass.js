@@ -3,6 +3,7 @@ var $ = plugins = require('gulp-load-plugins')();
 var config = require('./gulp.config').config;
 var banner = require('./gulp.config').banner;
 var package = require('./../package.json');
+var browserSync = require('browser-sync');
 
 gulp.task('sass:watch', function() {
   gulp.watch(config.styles.sass, ['sass:dev']);
@@ -39,5 +40,6 @@ function sass (opts) {
         outputStyle: opts.outputStyle
         }))
     .pipe($.if(!opts.build, $.sourcemaps.write(), $.header(banner, { package : package })))
-    .pipe(gulp.dest(config.styles.css));
+    .pipe(gulp.dest(config.styles.css))
+    .pipe(browserSync.reload({stream:true}));;
 }
