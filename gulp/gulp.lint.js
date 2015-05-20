@@ -29,14 +29,15 @@ function lint(src) {
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.notify({
       onLast: false,
-      message: function (file) {
+      message: function(file) {
         if (file.jshint.success) {
           // Don't show something if success
           return false;
         }
 
-        return file.relative + " (" + file.jshint.results.length + " errors)\n";
-    },
-    sound: 'Submarine'
+        return file.relative + ' (' + file.jshint.results.length + ' errors)\n';
+      },
+
+      sound: 'Submarine'
     }));
 }

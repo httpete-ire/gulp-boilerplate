@@ -8,7 +8,7 @@ gulp.task('clean', function() {
     .pipe($.clean());
 });
 
-gulp.task('minify', ['clean'] ,function () {
+gulp.task('minify', ['clean'], function() {
   return gulp
     .src(config.js.client)
     .pipe($.ngAnnotate())

@@ -9,14 +9,14 @@ gulp.task('sass:watch', function() {
   gulp.watch(config.styles.sass, ['sass:dev']);
 });
 
-gulp.task('sass:dev', function () {
+gulp.task('sass:dev', function() {
   return sass({
     outputStyle: 'expanded',
     build: false
   });
 });
 
-gulp.task('sass:build', function () {
+gulp.task('sass:build', function() {
   return sass({
     outputStyle: 'compressed',
     build: true
@@ -29,17 +29,17 @@ gulp.task('sass:build', function () {
  * @param  {Object} opts
  * @return {Gulp Object}
  */
-function sass (opts) {
-  if(!opts) {
+function sass(opts) {
+  if (!opts) {
     return;
   }
 
   return gulp.src(config.styles.sass)
     .pipe($.if(!opts.build, $.sourcemaps.init()))
     .pipe($.sass({
-        outputStyle: opts.outputStyle
-        }))
-    .pipe($.if(!opts.build, $.sourcemaps.write(), $.header(banner, { package : package })))
+      outputStyle: opts.outputStyle
+    }))
+    .pipe($.if(!opts.build, $.sourcemaps.write(), $.header(banner, { package: package })))
     .pipe(gulp.dest(config.styles.css))
-    .pipe(browserSync.reload({stream:true}));;
+  .pipe(browserSync.reload({stream:true}));;
 }
