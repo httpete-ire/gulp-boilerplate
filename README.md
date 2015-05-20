@@ -5,3 +5,5 @@ I wanted to experiment with the structure of my gulpfile as I found it can easil
 ###todo 
 - go through each folder and explain
 - set up dev:client and dev:server tasks
+- dev:client (watches for test, sass and browser sync, lints files)
+- dev:server (watches for test, lints files)
