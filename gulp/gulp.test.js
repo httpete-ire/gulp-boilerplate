@@ -12,12 +12,12 @@ gulp.task('test:server', function() {
   gulp.watch(config.tests.server, ['mocha']);
 });
 
-gulp.task('test:client', function() {
+gulp.task('jasmine', function() {
   return gulp
   .src(config.tests.public)
   .pipe($.karma({ configFile: config.tests.karma,  action: 'watch' }));
 });
 
-gulp.task('t', function() {
+gulp.task('test:client', function() {
   gulp.watch(config.tests.public, ['jasmine']);
 });
