@@ -2,5 +2,9 @@
 require('require-dir')('./gulp');
 var gulp = require('gulp');
 
-// common tasks
-gulp.task('client-dev', ['lint:client:watch', 'sass:watch']);
+/**
+ * tasks for client side dev: compile sass files, lint JavaScript files,
+ * run tests and start browser sync
+ */
+gulp.task('dev:client',
+  ['lint:client:watch', 'sass:watch', 'serve', 'test:client']);
