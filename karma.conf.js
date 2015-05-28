@@ -10,6 +10,12 @@ module.exports = function(config) {
       'karma-mocha',
       'karma-chai'
     ],
+    files: [
+      'app/dev/lib/angular/angular.js',
+      'app/dev/lib/angular-mocks/angular-mocks.js',
+      'app/dev/js/**/*.js',
+      'test/**/*.js'
+    ],
     reporters: ['spec']
   });
 };
